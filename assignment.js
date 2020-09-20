@@ -3,13 +3,14 @@ Orientation - JS assignment 1
 Solution by: [Giang Nguyen]
 */
 
-let flipReuslts, userGuess, points
+let flipReuslts, userGuess, allResults, points
 const coin = ['head', 'reverse']
 
 init()
 
 function checkUserChoice() {
   const userChoice = document.querySelector('input[name="user-choice"]:checked').value;
+  userGuess.push(userChoice)
   console.log('The user choice is', userChoice);
   return userChoice;
 }
@@ -22,7 +23,7 @@ function displayWins() {
 
 function displayResultHistory() {
   const results = document.querySelector('#result-history');
-  results.textContent = userGuess
+  results.textContent = allResuts
   return results
 }
 
@@ -56,10 +57,10 @@ function throwCoin() {
   const resultParagraph = document.querySelector('#result');
   if(userChoice === coin[result]) {
     resultParagraph.textContent = 'Your guess was correct!'
-    userGuess.push('Correct')
+    allResuts.push('Correct')
   } else {
     resultParagraph.textContent = 'Your guess was wrong!' 
-    userGuess.push('Wrong')
+    allResuts.push('Wrong')
   }
 
   // 3. Modify the points
@@ -78,6 +79,7 @@ throwButton.addEventListener('click', throwCoin);
 function init() {
   flipReuslts = [] 
   userGuess = []
+  allResuts = []
   points = 0
   document.querySelector('#coin-image').style.display = 'none';
 }
