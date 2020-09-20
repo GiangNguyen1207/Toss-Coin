@@ -57,10 +57,10 @@ function throwCoin() {
   const resultParagraph = document.querySelector('#result');
   if(userChoice === coin[result]) {
     resultParagraph.textContent = 'Your guess was correct!'
-    allResuts.push('Correct')
+    allResults.push('Correct')
   } else {
     resultParagraph.textContent = 'Your guess was wrong!' 
-    allResuts.push('Wrong')
+    allResults.push('Wrong')
   }
 
   // 3. Modify the points
@@ -79,7 +79,7 @@ throwButton.addEventListener('click', throwCoin);
 function init() {
   flipReuslts = [] 
   userGuess = []
-  allResuts = []
+  allResults = []
   points = 0
   document.querySelector('#coin-image').style.display = 'none';
 }
