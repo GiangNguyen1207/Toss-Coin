@@ -23,7 +23,7 @@ function displayWins() {
 
 function displayResultHistory() {
   const results = document.querySelector('#result-history');
-  results.textContent = allResuts
+  results.textContent = allResults
   return results
 }
 
