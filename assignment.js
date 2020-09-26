@@ -77,14 +77,14 @@ function displayResultHistory() {
 function displayHead() {
   const head = document.querySelector('#head-count');
   head.textContent = flipReuslts.filter(a => a === 'head').length
-  console.log('The amount of head is:', flipReuslts.filter(a => a === 'head').length)
+  console.log('The amount of head is:', head.textContent)
   return head
 }
 
 function displayReverse() {
   const reverse = document.querySelector('#reverse-count');
   reverse.textContent = flipReuslts.filter(a => a === 'reverse').length
-  console.log('The amount of reverse is:', flipReuslts.filter(a => a === 'reverse').length)
+  console.log('The amount of reverse is:', reverse.textContent)
   return reverse
 }
 
